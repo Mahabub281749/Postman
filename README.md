@@ -56,12 +56,27 @@ Req URL (Post): http://www.dummy.restapiexample.com/create
          
          Method 1:
          Syntax: newman run <<exported collection file.json>>
-         Example: C:\apitestdata\newman run EmployeeAPIS.postman_collection.json
+         Example: C:\apitestdata\>newman run EmployeeAPIS.postman_collection.json
          
          Method 2: generating html report
          Syntax: newman run <<exported collection file.json>> -r html
-         Example: C:\apitestdata\newman run EmployeeAPIS.postman_collection.json -r html
+         Example: C:\apitestdata\>newman run EmployeeAPIS.postman_collection.json -r html
          
          Method 3: Excuting collection remotely
          Shared the collection and get the URL
          Syntax: newman run <<shared URL>> -r html
+
+
+##### Fake API Creation & Testing #####
+
+    1. Install NodeJs
+    2. After Installation give below command in cmd:
+        node --version
+    3. npm comes with NodeJs
+    4. Check version
+        npm --version
+    5. Install Json server
+        npm install -g json-server
+    6. Create info.json file with sample data (Json format)
+    7. Run the below command to make your API's up and running
+        json-server info.json
