@@ -80,3 +80,32 @@ Req URL (Post): http://www.dummy.restapiexample.com/create
     6. Create info.json file with sample data (Json format)
     7. Run the below command to make your API's up and running
         json-server info.json
+
+        GET   http://localhost:3000/users
+        GET         http://localhost:3000/users/1
+        POST http://localhost:3000/users
+        PUT http://localhost:3000/users/4
+        DELETE http://localhost:3000/users/4
+
+
+##### Variables #####
+
+    1. Collection variables
+    2. Environment variables/Global variables
+
+    Collection variables:
+    Right click on -- Collection - Edit - Variables - Define varaibles (Key,value)- Update
+    Usage: {{Key}}
+
+    (Or) postman.setGlobalVariable("key","value");
+    postman.clearGlobalVariable("key");
+
+    Environment variables/Global variables:
+    Manage Environments - Global-Key,Value--Save
+    Usage: {{Key}}
+
+
+##### Variables #####
+
+    postman.setNextRequest("Request Name");
+    postman.setNextRequest("null")
