@@ -105,7 +105,44 @@ Req URL (Post): http://www.dummy.restapiexample.com/create
     Usage: {{Key}}
 
 
-##### Variables #####
+##### Workflow #####
 
     postman.setNextRequest("Request Name");
     postman.setNextRequest("null")
+
+#### Chain API ####
+
+    1) Create Get Request (Listing all users)
+        https://reqres.in/api/users?page=2
+ 
+    2) Create Global variable "username" is xyz at collection level
+ 
+    3) Write Test script in Request1 to update  "username"
+
+            jsonData=JSON.parse(responseBody)
+            value=jsonData.data[0].first_name
+            pm.globals.set("username", value);
+
+    4) Create Put Request (Update user by Name)
+        https://reqres.in/api/users/2
+
+    5) Parameterize username varaible in to 2nd request(PUT)
+            "name": "{{username}}"
+ 
+    6) Run Collection which contains both the requests
+
+
+#### Authorization ####
+
+    1) Basic Auth:
+    https://postman-echo.com/basic-auth
+    username: postman
+    password: password
+
+    2) API Key Auth
+    Get Request: https://api.openweathermap.org/data/2...
+    API Key/appid: fe9c5cddb7e01d747b4611c3fc9eaf2c
+
+    3) Bearer Token / OAuth 2.0
+    API Reference URL: https://developer.github.com/v3/repos/
+    Post Request: https://api.github.com/user/repos
