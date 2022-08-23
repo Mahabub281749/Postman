@@ -146,3 +146,23 @@ Req URL (Post): http://www.dummy.restapiexample.com/create
     3) Bearer Token / OAuth 2.0
     API Reference URL: https://developer.github.com/v3/repos/
     Post Request: https://api.github.com/user/repos
+
+
+#### Pre-Request Script ####
+
+
+    Pre-Request Script  -- Request---Response-- Test Script
+
+    Collection
+        Folder
+            Requests
+
+    Pre-Request Script: console.log("")
+    Test Script: console.log("")
+
+
+#### Postman Scripting ####
+
+    Postman Scripting using JavaScript and Chai BDD
+    ------------------------------------------------
+    Reference Link : https://learning.postman.com/docs/writing-scripts/test-scripts/
