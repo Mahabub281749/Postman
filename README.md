@@ -166,3 +166,47 @@ Req URL (Post): http://www.dummy.restapiexample.com/create
     Postman Scripting using JavaScript and Chai BDD
     ------------------------------------------------
     Reference Link : https://learning.postman.com/docs/writing-scripts/test-scripts/
+
+
+#### Export and Import ####
+
+    1. Export collection as File & Import as file
+    2. Export collection to a folder and import from folder
+    3. Export collection as a shared URL and import from URL
+        Share collection ---> Get public link then import as link
+    4. Import as RawTest---> Curl Command ---> Import
+
+
+#### Run Collection ####
+
+    1. Within the Postman using runner window
+    2. Run collection in the command prompt (CLI)
+
+        - Export collection file in JSON format
+        - Shared collection link
+
+        Pre-requisite:
+        - Node.js
+        - npm
+        - npm install newman
+
+            Export collection file in JSON format:
+
+                newman run <file path>
+
+            Shared collection link
+
+                newman run <shared public link>
+
+    3. Run collection through Jenkins
+
+        Jenkins war file
+
+            run below command in CLI:
+
+                java -jar jenkins.war
+
+        run collection:
+
+            newman run --disable-unicode <file path>
+            newman run --disable-unicode <shared link>
